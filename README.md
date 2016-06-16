@@ -1,6 +1,6 @@
 # radarjs
 
-**Description:** Its very simple radar paper js plugin based on http://paperjs.org/
+**Description:** Its very simple radar HTML5 plugin based on http://paperjs.org/
 
 Copyright: http://cameopix.com
 
