@@ -1,23 +1,33 @@
+/*
+ * Radar: A simple Radar plugin
+ * Developed by: Md Rakibulalam
+ * Country: Bangladesh
+ * Contact: email: rakibulalambd@gmail.com, cell: +88-01722488810, skype:rakibulalam
+ * Contribute: https://github.com/rakibulalam/radarjs.git
+ *
+ * @license: MIT license: http://opensource.org/licenses/MIT
+ *
+ */
 paper.install(window)
 
 
 APP={
-	WIDTH:500,
-	HEIGHT:500,
+	WIDTH:500, // define canvas width 
+	HEIGHT:500, // define canvas height
 	EL:'canvas',
 	CANVAS:{},
-	COMPUS_POSITION:{cx:0, cy:0},
+	COMPUS_POSITION:{cx:0, cy:0}, //define compus x,y positions into canvas
 	// RULER_POSITION:{rx:200,ry:-200},
 	// RULLER_SIZE:new Size(50,400),
-	SCOPE:new paper.PaperScope(),
+	SCOPE:new paper.PaperScope(), // assing paper.js scope
 	RADAR:{},// defult is papper
 	POSITION:{},
-	CMPS_POSITION:{},
-	RULS_POSITION:{},			
+	CMPS_POSITION:{}, //compus possition
+	//RULS_POSITION:{},			
 	CHILDREN:null,
-	TOOL:new Tool(),
-	VIEW:{},
-	RADIOUS:200,
+	TOOL:new Tool(), // assing paper js tools
+	VIEW:{}, //view mode
+	RADIOUS:200, //define radar radius
 	init:function()
 	{	
 	        
