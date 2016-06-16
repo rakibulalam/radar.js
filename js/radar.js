@@ -6,9 +6,9 @@ APP={
 	HEIGHT:500,
 	EL:'canvas',
 	CANVAS:{},
-	COMPUS_POSITION:{cx:-250, cy:0},
-	RULER_POSITION:{rx:200,ry:-200},
-	RULLER_SIZE:new Size(50,400),
+	COMPUS_POSITION:{cx:0, cy:0},
+	// RULER_POSITION:{rx:200,ry:-200},
+	// RULLER_SIZE:new Size(50,400),
 	SCOPE:new paper.PaperScope(),
 	RADAR:{},// defult is papper
 	POSITION:{},
@@ -32,8 +32,8 @@ APP={
 			
 			APP.CMPS_POSITION.x=APP.POSITION.x+APP.COMPUS_POSITION.cx;
 			APP.CMPS_POSITION.y=APP.POSITION.y+APP.COMPUS_POSITION.cy;
-		    APP.RULS_POSITION.x=APP.POSITION.x+APP.RULER_POSITION.rx;
-		    APP.RULS_POSITION.y=APP.POSITION.y+APP.RULER_POSITION.ry;
+		    // APP.RULS_POSITION.x=APP.POSITION.x+APP.RULER_POSITION.rx;
+		    // APP.RULS_POSITION.y=APP.POSITION.y+APP.RULER_POSITION.ry;
 						
 			APP.CHILDREN=APP.RADAR.project.activeLayer;	
 			
@@ -47,17 +47,17 @@ APP={
 				this.shadowOffsetX=15;
 				this.shadowOffsetY=15;
 			};
-		 var _scale=APP._draw_ruler_scale(5,10,'#1FFF18',0.5);
-		 var overlaypath=new Path.Rectangle();
-		 overlaypath.visible=false;
-		 overlaypath.fillColor='red';
-		 overlaypath.size=APP.RULLER_SIZE;
-  	 	  _scale.onMouseMove=function(e){
+		 // var _scale=APP._draw_ruler_scale(5,10,'#1FFF18',0.5);
+		 // var overlaypath=new Path.Rectangle();
+		 // overlaypath.visible=false;
+		 // overlaypath.fillColor='red';
+		 // overlaypath.size=APP.RULLER_SIZE;
+  	//  	  _scale.onMouseMove=function(e){
 			    
-				overlaypath.point=e.point;
-				overlaypath.visible=true;
+			// 	overlaypath.point=e.point;
+			// 	overlaypath.visible=true;
 				
-			  };
+			//   };
 		  
 			
 			APP._draw();
@@ -96,38 +96,38 @@ APP={
 	},
 	
 	
-	_draw_ruler_scale:function(_step,length,_color, _width)
-	{
+	// _draw_ruler_scale:function(_step,length,_color, _width)
+	// {
 		
 		
-		for(var i=0; i<=APP.RULLER_SIZE.height; i+=_step)
-		{
-			var lx=APP.RULS_POSITION.x-length;
-			var ly=APP.RULS_POSITION.y+i;
-			var rx=APP.RULS_POSITION.x+APP.RULLER_SIZE.width+length;
-			var ry=APP.RULS_POSITION.y+i;
-     		var vl_path=new APP.RADAR.Path();
-				vl_path.strokeColor=_color;
-				vl_path.strokeWidth=_width;
-				vl_path.moveTo(APP.RULS_POSITION.x, ly);
-				vl_path.lineTo(lx,ly);
-			var vr_path=new APP.RADAR.Path();
-				vr_path.strokeColor=_color;
-				vr_path.strokeWidth=_width;
-				vr_path.moveTo(APP.RULS_POSITION.x+APP.RULLER_SIZE.width, ry);
-				vr_path.lineTo(rx,ry);
-		}
+	// 	for(var i=0; i<=APP.RULLER_SIZE.height; i+=_step)
+	// 	{
+	// 		var lx=APP.RULS_POSITION.x-length;
+	// 		var ly=APP.RULS_POSITION.y+i;
+	// 		var rx=APP.RULS_POSITION.x+APP.RULLER_SIZE.width+length;
+	// 		var ry=APP.RULS_POSITION.y+i;
+ //     		var vl_path=new APP.RADAR.Path();
+	// 			vl_path.strokeColor=_color;
+	// 			vl_path.strokeWidth=_width;
+	// 			vl_path.moveTo(APP.RULS_POSITION.x, ly);
+	// 			vl_path.lineTo(lx,ly);
+	// 		var vr_path=new APP.RADAR.Path();
+	// 			vr_path.strokeColor=_color;
+	// 			vr_path.strokeWidth=_width;
+	// 			vr_path.moveTo(APP.RULS_POSITION.x+APP.RULLER_SIZE.width, ry);
+	// 			vr_path.lineTo(rx,ry);
+	// 	}
 		
-		return path = new Path.Rectangle({
-	        point: APP.RULS_POSITION,
-	        size: APP.RULLER_SIZE,
-	        strokeColor: _color,
-			strokeWidth:_width,
-			fillColor:'black'			
-          });
+	// 	return path = new Path.Rectangle({
+	//         point: APP.RULS_POSITION,
+	//         size: APP.RULLER_SIZE,
+	//         strokeColor: _color,
+	// 		strokeWidth:_width,
+	// 		fillColor:'black'			
+ //          });
 			
 		
-	},
+	// },
 	
 	_draw_radar_hand:function(_radious)
 	{
@@ -138,6 +138,7 @@ APP={
 				path.lineTo(APP.CMPS_POSITION.x,APP.CMPS_POSITION.y-_radious);
 			return path;
 	},
+
 	_draw_grid:function(_radius,_step,_color, _width)
 	{
            var _group=new APP.RADAR.Group();
