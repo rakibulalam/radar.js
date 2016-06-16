@@ -1,12 +1,13 @@
 # radarjs
 
-**Description:** Its very simple radar application based on http://paperjs.org/
+**Description:** Its very simple radar paper js plugin based on http://paperjs.org/
 
 Copyright: http://cameopix.com
 
 Licensed under the MIT license: http://opensource.org/licenses/MIT
 
 Demo :
+![alt tag](https://github.com/rakibulalam/radarjs/blob/master/radarsnapshot.jpg)
 
 http://cameopix.com/radar/
 
