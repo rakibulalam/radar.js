@@ -6,7 +6,7 @@ Copyright: http://cameopix.com
 
 Licensed under the MIT license: http://opensource.org/licenses/MIT
 
-Demo :
+# Demo :
 ![alt tag](https://github.com/rakibulalam/radarjs/blob/master/radarsnapshot.jpg)
 
 http://cameopix.com/radar/
