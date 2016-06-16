@@ -1,4 +1,4 @@
-# radarjs
+# radar.js
 
 **Description:** Its very simple radar HTML5 plugin based on http://paperjs.org/
 
